@@ -17,7 +17,7 @@ import json
 firebase = firebase.FirebaseApplication(YOUR URL HERE, None)
 
 f_time = datetime.now().strftime('%a %d %b @ %H:%M')
-toaddr = 'alopez@latticecapital.com.co'    # redacted
+toaddr = YOUR EMAIL HERE    # redacted
 me = 'sensor@test.com' # redacted
 
 msg = MIMEMultipart()
@@ -60,7 +60,7 @@ while True:
          msg.attach(data)
          s = smtplib.SMTP("smtp.gmail.com", 587)
          s.starttls()
-         s.login(user = 'alopez@latticecapital.com.co', password = 'Quicksand1218')
+         s.login(user = 'YOUR EMAIL HERE', password = YOUR PASSWORD HERE)
          s.sendmail(me, toaddr, msg.as_string())
          s.quit()
          os.remove("data_2.csv")
